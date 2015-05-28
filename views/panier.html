@@ -1,0 +1,68 @@
+<h1>Le panier</h1>
+
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+
+        <th>title</th>
+        <th>Prix</th>
+        <th>photo</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr ng-repeat="item in Panier.getCadie().items">
+
+        <td> {{item._title}}</td>
+        <td>{{item._price}}</td>
+        <td><img ng-src="{{item.cover}}" width="100" height="150"/></td>
+
+    </tr>
+
+    <tr>
+        <td></td>
+
+    </tr>
+
+    </tbody>
+</table>
+
+
+<pre>{{Panier.getTotalItems()}}</pre>
+<pre>{{Panier.getSubTotal() | currency: "Euro" }}</pre>
+
+<p ng-repeat="item in Panier.getCadie().url" style="display: inline">
+
+<td>{{item.url}}</td>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+
+        <th>title</th>
+        <th>Prix</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="book in books">
+        <td> {{book.type}}</td>
+        <td>{{book.value}}€</td>
+        <td>{{book.sliceValue}}</td>
+
+    </tr>
+
+    <tr>
+        <td></td>
+
+    </tr>
+
+    </tbody>
+</table>
+</p>
+
+

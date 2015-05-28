@@ -1,0 +1,22 @@
+{
+  "name": "HarryPottier",
+  "version": "1.0",
+  "authors": [
+    "julienG"
+  ],
+  "description": "appli angular panier",
+  "main": "index",
+  "keywords": [
+    "angularjs",
+    "json"
+  ],
+  "license": "MIT",
+  "homepage": "index",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

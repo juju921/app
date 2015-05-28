@@ -1,0 +1,40 @@
+<h1>La bibliothèque</h1>
+<form action="#/panier/" ng-submit="panier(url)" >
+    <table class="table table-striped" >
+        <thead>
+        <tr>
+
+            <th>title</th>
+            <th>Prix</th>
+            <th>photo</th>
+            <th>ajouter</th>
+            <th>total</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="book in books">
+
+            <td> {{book.title}}</td>
+            <td>{{book.price}}</td>
+            <td><img ng-src="{{book.cover}}" width="100" height="150"/></td>
+
+            <td>{{book.isbn}}</td>
+            <td>
+                <button class="btn btn-default" type="button" ng-click="Panier.addItem(book.isbn, book.title, book.price, book.cover, 1)">Ajouter</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+
+        </tr>
+
+        </tbody>
+    </table>
+
+  <pre>{{Panier.getTotalItems()}}</pre>
+    <input type="submit" value="commander" class="btn btn-primary" />
+
+</form>
+
